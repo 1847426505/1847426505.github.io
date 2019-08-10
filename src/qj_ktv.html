@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./css/reset.css"/>
+		<link href="https://cdn.bootcss.com/Swiper/4.0.1/css/swiper.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/media_2.css"/>
+		
+	</head>
+	<body>
+		<div class="preloader"> 
+		    <div class="layer"></div>
+		    <div class="inner">
+			    <figure><img data-src="http://asd.oiexi.com/image/default/AF86826798454F25A8593B35D1B6D9DF-6-2.gif" alt="Image"></figure>
+			    <p><span class="text-rotater" data-text="Homepark | Elements | Loading">Loading</span></p>
+		    </div>
+		</div>
+		<div id="div_main">
+			<div id="container" style="display: block;">
+				<section id="banner" style="width: 100%;height: 100vh; position: relative;" >
+					<video src="http://asd.oiexi.com/customerTrans/cbea0c061d0d45fabe8884aa6689f935/41d0d9f5-16b7583f41e-0000-0000-020-e9477.mp4" autoplay="autoplay" loop muted="muted" style="width: 100%;height: 100%;object-fit: fill;"></video>
+					<span class="down_next" style=""></span>
+				</section>
+				<div id="content">
+					<section id="project_list">
+						<nav class="project_nav" @click="sel_navClick($event)">
+							<a href="../index.html" style="font-size: 20px;">首页</a>
+							<li class="item active" data-index="0">全景KTV</li>
+							<li class="item" data-index="1">全景餐厅</li>
+							<li class="item" data-index="2">全景宴会厅</li>
+							<li class="item" data-index="3">动感单车</li>
+							<li class="item" data-index="4">全景茶室</li>
+							
+						</nav>
+						<div class="project_info">
+							<div id="ktv_info" class="hide active">
+								<div class="ktv_show_info show_info clearfix">
+									<div class="left_show_img fl"><img ref="pic_img" data-src="http://asd.oiexi.com/image/default/0B697EFCF92E4C4B8DB713A6F4922169-6-2.png" alt=""></div>
+									<div class="right_show_text fl">
+										<p>全景巨幕采用最先进的激光投影技术，
+										 带来全新的沉浸体验。 <br>
+										 根据歌曲类型不同变化对应的素材场景，
+										 根据客户指定更换场景主题。<br>
+										 利用全景巨幕服务器+投影机投射出超大画面，
+										把歌曲画面开窗口显示在其中，
+										配合不同的背景及组合方式，
+										通过全景巨幕APP进行操作，
+										达到更加震撼、沉浸式的效果。
+										 </p>
+									</div>
+								</div>
+								<div class="ktv_slide_img">
+									<div class="swiper-container">
+									  <div class="swiper-wrapper">
+										<div class="swiper-slide" v-for="(item,index) in scene_show" :key="item.ID" @click="selectImg($event,index)" >
+											<img :data-src="item.SRC" style="width: 100%;height: 100%;" >
+										</div>
+									  </div>
+									</div>
+								</div>
+								<div class="ktv_superiority">
+									<h1 class="title">全景巨幕的优势</h1>
+									<div class="text_list">
+										<li class="item">
+											<h3>更有带入感</h3>
+											<p>全景巨幕利用多台投影显示系统让KTV房间呈现沉浸式感官享受环境，充分让消费者能够获得不一样的体验和经历。</p>
+										</li>
+										<li class="item">
+											<h3>场景自定义</h3>
+											<p>自定义特定场景可满足，不同客户不同应用场景使用。</p>
+										</li>
+										<li class="item">
+											<h3>歌曲联动</h3>
+											<p>根据歌曲类型、及个别歌曲播放对应场景素材。</p>
+										</li>
+										<li class="item">
+											<h3>小程序操作更方便</h3>
+											<p>全只要扫码，就能马上操作，自由切换心仪的全景环境。</p>
+										</li>
+										<li class="item">
+											<h3>缤纷内容</h3>
+											<p>投影内容实时更新，不单单是动感十足的体验，更有更有自然风景、节日祝福、生日祝福等。</p>
+										</li>
+										<li class="item">
+											<h3>DIY属于你的祝福</h3>
+											<p>通过小程序上传照片、弹幕，给投影添加不同的风采。</p>
+										</li>
+									</div>
+								</div>
+							</div>
+							<div id="ct_info" class="hide ">
+								<div class="ct_banner banner"></div>
+								<div class="ct_text">
+									<p>
+										采用了高清投影机加全息沙幕、定制专属全息内容，打造不一样的沉浸式体验。<br>
+											让全息与顾客零距离，加入3D视频、动态桌面，增强用餐的趣味性。<br>
+										幽静的森林、绚丽的海底世界、璀璨的明月……这一切都在可以在全景餐厅中展示体验。<br>
+									</p>
+								</div>
+							</div>
+							<div id="yht_info" class="hide">
+								<div class="yht_banner banner"></div>
+								<div class="yht_text_list">
+									<li class="item">
+										<h3>梦幻效果</h3>
+										<p>利用3D全息可以打造出如梦似幻的立体场景，无论是“花瓣雨”还是童话城堡，或是想要在婚礼舞台上置身
+										湛蓝的星光下、蔚蓝的大海前，一切都可以实现。</p>
+									</li>
+									<li class="item">
+										<h3>震撼氛围</h3>
+										<p>在纱幕视觉展示、背景音响等共同作用下，呈现了宛如在影院欣赏大片的氛围。亦真亦幻的多维立体效果，让
+										来宾沉浸在美轮美奂的虚实结合的景象中。</p>
+									</li>
+									<li class="item">
+										<h3>双重影像</h3>
+										<p>高技术与浪漫共存的炫彩视觉，朦胧中出现如海市蜃楼般的飘渺影像，营造出虚拟与现实无以伦比的
+										双重影像世界。</p>
+									</li>
+								</div>
+							</div>
+							<div id="dgdc_info" class="hide">
+								<div class="dgdc_show_info show_info clearfix">
+									<div class="left_show_img"><img data-src="http://asd.oiexi.com/image/default/5198147D7A7A4234BAAC6E7CC600A649-6-2.png" alt=""></div>
+									<div class="right_show_text">
+										<li class="item">
+											<p>利用多台投影显示系统+全景图像处理技术让单车房
+											呈现沉浸式感官享受环境。</p>
+										</li>
+										<li class="item">
+											<h3>自定义骑行节奏</h3>
+											<p>根据教练的节奏变化，使视频镜头产生速度的变化，
+											使大家融入到紧张又舒缓的健身骑行中。</p>
+										</li>
+										<li class="item">
+											<h3>自定义骑行氛围</h3>
+											<p>全新体验不一样的骑行氛围（海边、沙漠、森林、
+											海底等）。</p>
+										</li>
+									</div>
+								</div>
+							</div>
+							<div id="cs_info" class="hide">
+								<div class="cs_banner banner"></div>
+								<div class="cs_text">
+									<p>
+										全景巨幕利用先进的投影技术与茶文化相结合打造全景茶室<br>
+										营造一种独特韵味的茶文化空间氛围<br>
+										带来一种沉浸式体验<br>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="project_demo_show">
+							<div class="title_left">案例/展示</div>
+							<nav class="video_list">
+								<li class="item" v-for="(item,index) in scene_videoList" @click.stop="play_video(item)" @mouseenter="enter_video($event)" @mouseleave="leave_video($event)">
+									<div class="video_play" vpath="image/v1.jpg" :ipath="item.video_url">
+										<img :src="item.img_url" :data-src="item.img_url"  />
+										<i class="play"></i>
+									</div>
+									<span>{{item.title_msg}}</span></br>
+									<span>2019/09/18</span>
+								</li>
+							</nav>
+							<div class="videos">
+								<video width="640" id="video" poster="" preload="auto" controls="controls" autoplay="autoplay" height="" src=""></video>
+								<i @click="close1"></i>
+							</div>
+						</div>
+					</section>
+				</div>
+				<footer id="footer">
+					<div id="footer_content">
+						<nav class="footer-nav">
+							<li class="email" style="margin-right:25px ;">
+								<div class="title">
+									联系我们
+								</div>
+								<p>福州市仓山区闽江大道星海通信6号楼3楼</p>
+								<p>电话：4008-317-319</p>
+								<p>邮箱：1363169592@qq.com</p>
+							</li>
+							<li class="qrcode" style="margin-left:25px ;" >
+								<img style="width: 150px;height: 150px;" data-src="http://asd.oiexi.com/image/default/451A826EB17C4E709BA83A952C9B82F5-6-2.jpg" >
+								<p style="line-height: 10px; padding-top:10px ;text-align: center;">官方公众号</p>
+							</li>
+						</nav>
+						<p style="text-align: center; line-height: 40px;color: #b2b1b1;"> 福州讯丰信息技术有限公司 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 备案号：18018765号-1</p>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<script src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/Swiper/4.0.1/js/swiper.min.js"></script>
+		<script src="https://cdn.bootcss.com/vue/2.5.8/vue.min.js"></script>
+		<script src="js/index_2.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

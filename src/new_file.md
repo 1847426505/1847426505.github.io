@@ -1,0 +1,1 @@
+lightSpeedIn  slideInUp  slideInLeft  slideInRight  fadeInDown

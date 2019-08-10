@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/media_2.css"/>
+		<script src="js/wow.js"></script>
+	</head>
+	<body>
+		<div id="div_main">
+			<div id="container">
+				<div id="header_content">
+					<header id="header">
+						<div class="header_logo"><a href="../index.html"></a></div>
+						<div class="menu">
+							<div class="toggle"></div>
+							<nav class="header_list wow lightSpeedIn">
+								<li class="item "><a href="../index.html">首页</a></li>
+								<li class="item "><a href="./about.html">关于我们</a></li>
+								<li class="item"><a href="./qj_ktv.html?sel_id=0">产品</a></li>
+								<li class="item active"><a href="./news.html">资讯</a></li>
+							</nav>
+						</div>
+					</header>
+				</div>
+				<div id="content">
+					<section id="child_news">
+						<nav class="list">
+							<li class="item_show item wow fadeInUp">
+								<a href="#">
+									<h3 class="title">浓情端午</h3>
+									<img data-src="image/news/浓情端午.jpg" >
+									<p>一起来看划龙舟</p>
+									<span>06月07日</span>
+								</a>
+							</li>
+							<li class="item_show item wow fadeInUp">
+								<a href="#">
+									<h3 class="title">全景巨幕IN鲅鱼圈</h3>
+									<img data-src="image/news/全景.jpg" >
+									<p>更狂欢、更酷炫尽在这里！</p>
+									<span>05月24日</span>
+								</a>
+							</li>
+							<li class="item_show item wow fadeInUp">
+								<a href="#">
+									<h3 class="title" style="font-size: 17px;">清明时节雨纷纷，路上行人欲断魂</h3>
+									<img data-src="image/news/清明.jpg" >
+									<p>清明节，又称踏青节、行清节、三月节、祭祖节，节期在仲春与暮春之交。</p>
+									<span>04月04日</span>
+								</a>
+							</li>
+							<li class="item_show item wow fadeInUp">
+								<a href="#">
+									<h3 class="title">全景巨幕邀您一起闹元宵！</h3>
+									<img data-src="image/news/元宵.jpg" >
+									<p>元宵素材全新上线！</p>
+									<span> 02月19日</span>
+								</a>
+							</li>
+							<li class="item_show item wow fadeInLeft" data-wow-delay="1s">
+								<a href="#">
+									<h3 class="title">全景纱幕上线！</h3>
+									<img data-src="image/news/纱幕.jpg" >
+									<p>全景纱幕“全新体验，震撼来袭。”</p>
+									<span>01月08日</span>
+								</a>
+							</li>
+							<li class="item_show item wow fadeInLeft" data-wow-delay="0.5s">
+								<a href="#">
+									<h3 class="title">全景巨幕动感系列</h3>
+									<img data-src="image/news/动感.jpg" >
+									<p>全景巨幕动感系列投影给你带来完全不一样的动感体验！</p>
+									<span>2018年12月20日</span>
+								</a>
+							</li>
+							<li class="item_show item wow fadeInRight" data-wow-delay="0.5s">
+								<a href="#">
+									<h3 class="title" style="font-size: 17px;">圣诞派对来场全新体验</h3>
+									<img data-src="image/news/圣诞.jpg" >
+									<p>营造一个有气氛的圣诞派对，需要准备些什么呢？！</p>
+									<span>2018年12月17日</span>
+								</a>
+							</li>
+							<li class="item_show item wow fadeInRight" data-wow-delay="1s">
+								<a href="#">
+									<h3 class="title">全景巨幕节日系列投影！</h3>
+									<img data-src="image/news/节日.jpg" >
+									<p>全景巨幕节日系列投影全景巨幕会更具不同的节日来制作节日主题的全景投影。</p>
+									<span>2018年12月12日</span>
+								</a>
+							</li>
+						</nav>
+					</section>
+				</div>
+				<footer id="footer">
+					<div id="footer_content">
+						<nav class="footer-nav">
+							<li class="email" style="margin-right:25px;">
+								<div class="title">
+									联系我们
+								</div>
+								<p>福州市仓山区闽江大道星海通信6号楼3楼</p>
+								<p>电话：4008-317-319</p>
+								<p>邮箱：1363169592@qq.com</p>
+							</li>
+							<li class="qrcode" style="margin-left:25px ;">
+								<img style="width: 150px;height: 150px;" data-src="image/code.jpg" >
+								<p style="line-height: 10px; padding-top:10px; text-align: center;">官方公众号</p>
+							</li>
+						</nav>
+						<p style="text-align: center; line-height: 40px;color: #b2b1b1;"> 福州讯丰信息技术有限公司 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 备案号：18018765号-1</p>
+					</div>
+					
+				</footer>
+			</div>
+		</div>
+		<script type="text/javascript">
+			if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+				new WOW().init();
+			};
+			const imgs = document.querySelectorAll('img')
+			//const ul = document.getElementsByClassName('.scroll-con')[0];
+			const io = new IntersectionObserver(entries => {
+			  entries.forEach(entry => {
+				if (entry && entry.isIntersecting) {
+				  entry.target.src = entry.target.dataset.src
+				  io.unobserve(entry.target)
+				}
+			  })
+			})
+			imgs.forEach(item => {
+			  io.observe(item)
+			})
+			
+			/* $("#child_news li").click(()=>{
+				console.log(this)
+			}) */
+			var url = [
+				{id:0,url:"https://mp.weixin.qq.com/s/jDgotwnIvU98-v46a8ydBg"},
+				{id:1,url:"https://mp.weixin.qq.com/s/u9JeT-GWzQHBm-KVvOZYwg"},
+				{id:2,url:"https://mp.weixin.qq.com/s/oO_sfg1TcHWdV8wDp_awoQ"},
+				{id:3,url:"https://mp.weixin.qq.com/s/zFiHniOH2pOD8k2ssCmcvg"},
+				{id:4,url:"https://mp.weixin.qq.com/s/8-2KsvtxSnlgFi0ZxICnww"},
+				{id:5,url:"https://mp.weixin.qq.com/s/MBE_tY_6bzbGHXkEXk28jg"},
+				{id:6,url:"https://mp.weixin.qq.com/s/jM0hQDXpInpur7GlsTj64A"},
+				{id:7,url:"https://mp.weixin.qq.com/s/anxxtkwUGnv0GsMfIaqKIw"},
+			]
+			
+			
+			var items = document.querySelectorAll('.item_show')
+			items.forEach((item,index)=>{
+				item.onclick=function(){
+					if(url[index]!= undefined){
+						location.href=url[index].url;
+					}
+				}
+			})
+			
+			
+		</script>
+	</body>
+</html>

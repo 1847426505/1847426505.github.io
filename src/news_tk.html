@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style type="text/css">
+			#bulletBox{
+				width: 100%;
+				height: auto;
+				background: #f5f5f5 ;
+				position: absolute;
+				/* display: none; */
+				transition :2s all ease-in;
+				
+			}
+			#bulletBox.active{
+				display: block;
+			}
+			.box_content{
+				width:60%;
+				height: auto;
+				background: #fff5eb;
+				margin: 0 auto;
+				z-index: 1000;
+				position: relative;
+				left: 0;
+				top:0;
+			}
+			.mask{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				left: 0;
+				top: 0;
+				background: rgba(0,0,0,0.3);
+			}
+			.qrcode{
+				width: 150px;
+				height: auto;
+				background: #fff;
+				position: fixed;
+				top: 20px;
+				transform: translateX(61vw);
+				padding: 15px;
+			}
+			.qrcode p{
+				padding-left:0 ;
+				text-align: center;
+				
+			}
+			.newsInfo_1>h1,p{
+				padding-left:30px ;
+			} 
+			.newsInfo_1 h1{
+				font-size: 22px;
+				margin-bottom:14px;
+			}
+			.newsInfo_1 p{
+				font-size: 15px;
+				color: rgba(0,0,0,0.3);
+			}
+			.newsInfo_1 p span{
+				color: #576b95;
+				cursor: pointer;
+			}
+			
+			.img_list{
+				width: 100%;
+				height: 100%;
+			}
+			img,video{
+				display: block;
+				width: 100%;
+				height: auto;
+				/* margin-bottom:40px ; */
+				object-fit: fill;
+			}
+			video{
+				width: 80%;
+				margin: 30px auto;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!-- <button type="button" class="btn">切换</button> -->
+		<div id="bulletBox">
+			<!-- <div class="mask"></div> -->
+			<div class="box_content">
+				<ul class="list">
+					<li class="item" style="display: none;">
+						<div class="newsInfo_1">
+							<h1 class="title">浓情端午</h1>
+							<p><span>OIEXI全景巨幕</span> &nbsp;&nbsp;6月6日</p>
+							<div class="img_list">
+								<img src="image/buhuo/buhuo2.png" >
+								<img src="image/buhuo/buhuo3.png" >
+								<img src="image/bufuo.png" >
+								<img src="image/buhuo/buhuo4.png" >
+								<video src="http://asd.oiexi.com/customerTrans/cbea0c061d0d45fabe8884aa6689f935/41d0d9f5-16b7583f41e-0000-0000-020-e9477.mp4" controls="controls" ></video>
+							</div>
+						</div>
+					</li>
+					<li class="item">
+						
+					</li>
+				</ul>
+				<img src="image/buhuo/buhuo5.png" >
+				<div class="qrcode">
+					<img src="image/code.jpg" >
+					<p style="">微信扫一扫</br>关注该公众号</p>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<script type="text/javascript">
+			/* let btn = document.querySelector('.btn')
+			btn.addEventListener('click',()=>{
+				document.querySelector('#bulletBox').classList.add('active')
+			}) */
+		</script>
+	</body>
+</html>

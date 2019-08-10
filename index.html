@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="./src/css/reset.css"/>
+		<link href="https://cdn.bootcss.com/Swiper/4.0.1/css/swiper.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="./src/css/index.css"/>
+		<link rel="stylesheet" href="./src/css/Media.css">
+	</head>
+	<body>
+		<div class="preloader"> 
+		    <div class="layer"></div>
+		    <div class="inner">
+			    <figure><img data-src="http://asd.oiexi.com/image/default/AF86826798454F25A8593B35D1B6D9DF-6-2.gif" alt="Image"></figure>
+			    <p><span class="text-rotater" data-text="Homepark | Elements | Loading">Loading</span></p>
+		    </div>
+		</div>
+		<div id="div_main">
+			<div id="fiex_top" @click="fiex_top" style="">
+				<img data-src="src/image/fiex_top.png" >
+			</div>
+			<div id="container">
+				<div id="header_content">
+					<header id="header" >
+						<div class="header_logo"><a href="index.html" style="display: block;height: 100%;width: 100%;"></a></div>
+						<div class="menu" ref="menu">
+							<div class="toggle" @click="toggleClick"></div>
+							<nav class="header_list wow lightSpeedIn" @click="header_listClick($event)">
+								<li class="item active " data-title="header" data-index="0" >首页</li>
+								<li class="item" data-title="about" data-index="1"><a href="./src/about.html">关于我们</a></li>
+								<li class="item" data-title="about" data-index="2"><a href="./src/qj_ktv.html?sel_id=0">产品</a></li>
+								<li class="item" data-title="news" data-index="3"><a href="./src/news.html">资讯</a></li>
+								<li class="item" data-title="friend" data-index="4">合作伙伴</li>
+								<li class="item" data-title="footer" data-index="5">加入我们</li>
+								<!-- <li class="item" data-title="footer" data-index="6">联系我们</li> -->
+							</nav>
+						</div>
+					</header>
+				</div>
+				
+				<section id="banner">
+					<div class="swiper-container swiper1" >
+						<div class="swiper-wrapper">
+						  <div class="swiper-slide"><img data-src="http://asd.oiexi.com/image/default/2B1433915FAB44EBB6382D0ECA09E16B-6-2.png" ></div>
+						  <div class="swiper-slide"><img data-src="http://asd.oiexi.com/image/default/328AD04776BB42A2B9239E363EF9D3D4-6-2.jpg" ></div>
+						  <div class="swiper-slide"><img data-src="http://asd.oiexi.com/image/default/68106D3258F54345BD1E91DECF4BF44E-6-2.jpg" ></div>
+						  <div class="swiper-slide"><img data-src="http://asd.oiexi.com/image/default/A468828C0F98455C9E2C2E4C59EE6021-6-2.jpg" ></div>
+						  <div class="swiper-slide"><img data-src="http://asd.oiexi.com/image/default/032321B9C01E4D4698B31BC9454084F1-6-2.jpg" ></div>
+						</div>
+						 <div class="swiper-pagination swiper-pagination-white"></div>
+
+					</div>
+				</section>
+				<div id="content" style="background: url(http://asd.oiexi.com/image/default/0DE40720BD1444FD979A04563C27D256-6-2.jpg) 0 0 no-repeat;width: 100%;height: 100%; background-size: 100% 100%;">
+					<section id="about" class="public_content">
+						<div id="about_content">
+							<div class="about_title title">
+								<h1>ABOUT US</h1>
+								<span>关于我们</span>
+							</div>
+							<nav class="about_nav wow slideInUp" >
+								<li class="item ">
+									<span>全景项目</span>
+									<i class="icon icon-xm"></i>
+								</li>
+								<li class="item active">
+									<span>全景咨询</span>
+									<i class="icon icon-zx"></i>
+								</li>
+								<li class="item">
+									<span>合作伙伴</span>
+									<i class="icon icon-hz"></i>
+								</li>
+								<li class="item">
+									<span>联系我们</span>
+									<i class="icon icon-lx"></i>
+								</li>
+							</nav>
+							<div class="project">
+								<div class="title_left">
+									<h1>PROJECT</h1>
+									<p>全景项目</p>
+								</div>
+								<nav class="image_nav_right"@click.stop="scene_listClick($event)">
+									<li class="item">
+										<div class="show_image">
+											<div class="hover_project" data-index="0"></div>
+											<img data-src="http://asd.oiexi.com/image/default/4B38031DDCA040F0A52D9F537DD34233-6-2.png" alt="">
+										</div>
+										<p>全景KTV</p>
+									</li>
+									<li class="item">
+										<div class="show_image">
+											<div class="hover_project"  data-index="1"></div>
+											<img data-src="http://asd.oiexi.com/image/default/DC750F4C80D64EFD817312618E6019DB-6-2.png" alt="">
+										</div>
+										<p>全景餐厅</p>
+									</li>
+									<li class="item">
+										<div class="show_image">
+											<div class="hover_project"  data-index="2"></div>
+											<img data-src="http://asd.oiexi.com/image/default/F170E0451FC84F368F8B9B28F9399C40-6-2.png" alt="">
+										</div>
+										<p>全景宴会厅</p>
+									</li>
+									<li class="item">
+										<div class="show_image">
+											<div class="hover_project"  data-index="3"></div>
+											<img data-src="http://asd.oiexi.com/image/default/314DA78330994D808B06AC6FE49925A1-6-2.png" alt="">
+										</div>
+										<p>动感单车</p>
+									</li>
+									<li class="item">
+										<div class="show_image">
+											<div class="hover_project"  data-index="4"></div>
+											<img data-src="http://asd.oiexi.com/image/default/0B697EFCF92E4C4B8DB713A6F4922169-6-2.png" alt="">
+										</div>
+										<p>全景茶室</p>
+									</li>
+								</nav>
+							</div>
+						</div>
+					</section>
+					<section id="news" class="public_content">
+						<div id="news_content">
+							<div class="title">
+								<h1>NEWS</h1>
+								<span>全景咨询</span>
+							</div>
+							<div class="news_nav">
+								<div class="news_show_left wow slideInLeft">
+									<img data-src="http://asd.oiexi.com/image/default/9F462B8A899146D2B75A7AA501DC088C-6-2.jpg" >
+								</div>
+								<div class="news_list_right wow slideInRight">
+									<div class="list_btn">
+										<button type="button">行业资讯</button>
+										<button type="button">媒体报道</button>
+										<button type="button">商业合作</button>
+									</div>
+									<div class="list_info_nav">
+										<li class="item" >
+											<img data-src="http://asd.oiexi.com/image/default/9F462B8A899146D2B75A7AA501DC088C-6-2.jpg" class="info_left" alt="">
+											<div class="info_list">
+												<h3>全景巨幕入驻鲅鱼圈鼎红国际</h3>
+												<p>更狂欢、更酷炫尽在这里！</p>
+											</div>
+											<span>2019-06-20</span>
+										</li>
+										<li class="item">
+											<img data-src="http://asd.oiexi.com/image/default/020A225DFB4F43559075C496F97F7524-6-2.jpg" class="info_left" alt="">
+											<div class="info_list">
+												<h3>福州讯丰携手雍和会给大家献上视觉盛宴</h3>
+												<p>这个六月福州讯丰携手雍和会给大家献上视觉盛宴</p>
+											</div>
+											<span>2019-06-20</span>
+										</li>
+										<li class="item">
+											<img data-src="http://asd.oiexi.com/image/default/D206C66245C6407098678A1FDAF91A04-6-2.jpg" class="info_left" alt="">
+											<div class="info_list">
+												<h3>技术前沿丨你还在头疼你家KTV走廊单调吗？</h3>
+												<p>互动投影简介感应式互动投影系统主要针对新型多媒体内容而设计。<br>本系统采用先进的计算机视觉技术和投影显示</p>
+											</div>
+											<span>2019.03.31</span>
+										</li>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</section>
+					<section id="friend" class="public_content">
+						<div id="friend_content">
+							<div class="title">
+								<h1>PARTNER</h1>
+								<span>合作伙伴</br></span>
+							</div>
+							<div class="firend_logo_list wow fadeInDown">
+								<li class="item"><img data-src="src/image/friend_logo/华为.png" ></li>
+								<li class="item"><img data-src="src/image/friend_logo/联想.png" ></li>
+								<li class="item"><img data-src="src/image/friend_logo/oiexi_logo.png" ></li>
+								<li class="item"><img data-src="src/image/friend_logo/AMD.png" ></li>
+								<li class="item"><img data-src="src/image/friend_logo/奥图码.png" ></li>
+								<li class="item"><img data-src="src/image/friend_logo/爱普生.png" ></li>
+								<li class="item"><img data-src="src/image/friend_logo/理光.png" ></li>
+								<li class="item"><img data-src="src/image/friend_logo/科视.png" ></li>
+								<li class="item"><img data-src="src/image/friend_logo/英伟达.png" ></li>
+								<li class="item"><img data-src="src/image/friend_logo/英特尔.png" ></li>
+							</div>
+							
+							<div class="demo_show">
+								<div class="demo_slide">
+									<h1 class="show_title">全景案例展示</h1>
+									<div class="show_slide_list">
+										<div class="swiper-container swiper2" >
+											<div class="swiper-wrapper">
+											  <div class="swiper-slide" v-for="(item,index) in scene_show" :key="item.ID"   ><img style="width: 100%;height: 100%;"  :data-src="item.SRC" ></div>
+											</div>
+										</div>
+										<div class="swiper-button-next"></div>
+										<div class="swiper-button-prev"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+				<footer id="footer">
+					<div id="footer_content">
+						<nav class="footer-nav">
+							
+							<li class="email" style="margin-right:25px ;">
+								<div class="title">
+									联系我们
+								</div>
+								<p>福州市仓山区闽江大道星海通信6号楼3楼</p>
+								<p>电话：4008-317-319</p>
+								<p>邮箱：1363169592@qq.com</p>
+							</li>
+							<li class="qrcode" style="margin-left:25px ;">
+								<img style="width: 150px;height: 150px;" data-src="http://asd.oiexi.com/image/default/451A826EB17C4E709BA83A952C9B82F5-6-2.jpg" >
+								<p style="line-height: 10px; padding-top:10px; text-align: center;">官方公众号</p>
+							</li>
+						</nav>
+						<p style="text-align: center; line-height: 40px;color: #b2b1b1;">福州讯丰信息技术有限公司  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 备案号：18018765号-1</p>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<script src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/Swiper/4.0.1/js/swiper.min.js"></script>
+		<script src="https://cdn.bootcss.com/vue/2.5.8/vue.min.js"></script>
+		<script src="src/js/wow.js"></script>
+		<script src="./src/js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			const imgs = document.querySelectorAll('img')
+			const io = new IntersectionObserver(entries => {
+			  entries.forEach(entry => {
+				if (entry && entry.isIntersecting) {
+				  entry.target.src = entry.target.dataset.src
+				  io.unobserve(entry.target)
+				}
+			  })
+			})
+			imgs.forEach(item => {
+			  io.observe(item)
+			})
+		</script>
+	</body>
+</html>
